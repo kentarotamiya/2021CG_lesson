@@ -36,6 +36,12 @@ var cone = new THREE.Mesh( coneGeometry, coneMaterial );
 cone.position.set( 0, 0, -5 );
 scene.add( cone );
 
+    // 箱を作成
+    var geometry = new THREE.BoxGeometry(2, 2, 2);//(1, 1, 1)から(2, 2, 2)へ
+    var material = new THREE.MeshPhongMaterial({ color: 0x00ffff });//色変えた
+    var box = new THREE.Mesh(geometry, material);
+    box.position.z = -15;
+    scene.add(box);
   
     // 平行光源1
     var directionalLight1 = new THREE.DirectionalLight(0xffffff);
