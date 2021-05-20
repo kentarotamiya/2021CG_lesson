@@ -36,7 +36,7 @@ var cone = new THREE.Mesh( coneGeometry, coneMaterial );
 cone.position.set( 0, 0, -5 );
 scene.add( cone );
 
-    // 箱を作成
+    // 箱を作成　追加
     var geometry = new THREE.BoxGeometry(2, 2, 2);//(1, 1, 1)から(2, 2, 2)へ
     var material = new THREE.MeshPhongMaterial({ color: 0x00ffff });//色変えた
     var box = new THREE.Mesh(geometry, material);
@@ -51,6 +51,9 @@ scene.add( cone );
     // 平行光源2
         var directionalLight2 = new THREE.DirectionalLight(0xffffff);
     directionalLight2.position.set(-1, 1, 1);
+    // 平行光源３　追加
+        var directionalLight2 = new THREE.DirectionalLight(0xffffff);
+    directionalLight2.position.set(-1, 1, 1);
     // シーンに追加
     scene.add(directionalLight2);
   
@@ -61,7 +64,7 @@ scene.add( cone );
       // 箱を回転させる
       cone.rotation.x += 0.01;
       cone.rotation.y += 0.01;
-      // 箱を回転させる
+      // 箱を回転させる　追加
       box.rotation.x += 0.01;
       box.rotation.y += 0.01;
   
