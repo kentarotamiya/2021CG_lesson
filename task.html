@@ -36,12 +36,21 @@ var cone = new THREE.Mesh( coneGeometry, coneMaterial );
 cone.position.set( 0, 0, -5 );
 scene.add( cone );
 
-    // 箱を作成　追加
-    var geometry = new THREE.BoxGeometry(2, 2, 2);//(1, 1, 1)から(2, 2, 2)へ
-    var material = new THREE.MeshPhongMaterial({ color: 0x00ffff });//色変えた
-    var box = new THREE.Mesh(geometry, material);
-    box.position.z = -10;
-    scene.add(box);
+// 箱を作成　追加
+var geometry = new THREE.BoxGeometry(2, 2, 2);//(1, 1, 1)から(2, 2, 2)へ
+var material = new THREE.MeshPhongMaterial({ color: 0x00ffff });//色変えた
+var box = new THREE.Mesh(geometry, material);
+box.position.z = -10;
+scene.add(box);
+    
+//ドーナッツ
+var torusGeometry = new THREE.TorusGeometry( 0.5, 0.2, 6, 12 ); 
+//半径、ドーナッツの太さ、ドーナッツのチューブ方向の分割数、水平方向の分割数
+var torusMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff } );
+var torus = new THREE.Mesh( torusGeometry, torusMaterial );
+torus.position.set( 0, 0, -5);
+scene.add( torus );
+
   
     // 平行光源1
     var directionalLight1 = new THREE.DirectionalLight(0xffffff);
