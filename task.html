@@ -43,7 +43,7 @@ var box = new THREE.Mesh(geometry, material);
 box.position.z = -10;
 scene.add(box);
     
-//ドーナッツ
+//ドーナッツ　追加（ライト反映見るため）
 var torusGeometry = new THREE.TorusGeometry( 0.5, 0.2, 6, 12 ); 
 //半径、ドーナッツの太さ、ドーナッツのチューブ方向の分割数、水平方向の分割数
 var torusMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff } );
