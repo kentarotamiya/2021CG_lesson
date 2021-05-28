@@ -91,11 +91,11 @@
     rwin.position.set(-0.65,0.15,0);
 
     //くちばしの作成
-    var beak_g = new THREE.SphereGeometry( 0.1, 0.5, 0 );
+    var beak_g = new THREE.SphereGeometry( 0.1, 0.5, 32 );
     var material_beak = new THREE.MeshPhongMaterial({ color: 0xffff00 });
     var beak = new THREE.Mesh( beak_g, material_beak);
     beak.rotation.x = -1.5;
-    beak.position.set(0,1,-0.6);
+    beak.position.set(0,1,-0.6, -0.1);
 
     //左目
     var eye_g = new THREE.SphereGeometry( 0.1, 32, 32 );
