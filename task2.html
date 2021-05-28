@@ -91,11 +91,12 @@
     rwin.position.set(-0.65,0.15,0);
 
     //鼻の作成
-    var beak_g = new THREE.SphereGeometry( 1, 0.5, 32 );
+    var beak_g = new THREE.SphereGeometry( 1, 0.5, 32 );//半径１に変更
     var material_beak = new THREE.MeshPhongMaterial({ color: 0xffff00 });
     var beak = new THREE.Mesh( beak_g, material_beak);
     beak.rotation.x = -1.5;
     beak.position.set(0, 1, -0.5);//Z軸座標を-0.6から-0.5に変更
+    lleg.scale.y = 2;//追加　縦に伸ばす
 
     //左目
     var eye_g = new THREE.SphereGeometry( 0.1, 32, 32 );
