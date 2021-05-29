@@ -42,14 +42,7 @@
     var axis = new THREE.AxisHelper(5);
     axis.position.set(0,-0.8,0);             
 
-    // いろいろなマテリアルの実験
-    //var material = new THREE.MeshBasicMaterial({ color: 0x0000ff });
-    //var material = new THREE.MeshNormalMaterial({ color: 0x000000 });
-    //var material = new THREE.MeshLambertMaterial({ color: 0x0000ff });
-    //var material = new THREE.MeshPhongMaterial({ color: 0x0000ff, specular:0xffff00, shininess:4 });
-    //var material = new THREE.MeshPhongMaterial({ color: 0x0000ff, emissive: 0xffff00, emissiveIntensity: 2 });
-    //var material = new THREE.MeshToonMaterial({ color: 0x005555 });
-    var material = new THREE.MeshStandardMaterial({ color: 0x0005555 });
+    var material = new THREE.MeshPhongMaterial({ color: 0xFF0000, ambient: 0x57001f, specular: 0xff4d00, shininess: 30, metal: true });
 
     // 頭を作成
     var head_g = new THREE.SphereGeometry( 0.5, 32, 32 );
