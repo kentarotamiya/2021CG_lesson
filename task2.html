@@ -129,14 +129,14 @@
     var l_eye = new THREE.Mesh( eye_g, material_eye);
     l_eye.position.set(-0.27,1.2,-0.36);//x軸座標を-0.27に、y軸座標を1.2に、z軸座標を-0.36に変更
     
-     //ペンギンのオブジェクト
+     //コアラのオブジェクト
    const koala = new THREE.Group();
      koala.add(head); // 頭を追加
      koala.add(body); //体を追加
      koala.add(lleg); //左足を追加
      koala.add(rleg); //右足を追加
-     koala.add(lwin); //左羽を追加
-     koala.add(rwin); //右羽を追加
+     koala.add(lwin); //左手を追加
+     koala.add(rwin); //右手を追加
      koala.add(beak); //鼻
      koala.add(r_eye); //右目
      koala.add(l_eye); //左目
@@ -144,14 +144,14 @@
   　　  koala.add(lleg1); //左足上部
      koala.add(l_ear); //左耳
      koala.add(r_ear); //右耳
-     koala.position.set(0,1,0);//ペンギングループの原点の位置
+     koala.position.set(0,1,0);//コアラグループの原点の位置
    
 
      //全体のオブジェクト
 
     const all = new THREE.Group();
      all.add(plane);//平面を追加
-     all.add(koala); // ペンギンを追加
+     all.add(koala); // コアラを追加
      all.position.set(0,0,-5);//全体グループの原点の位置
     scene.add(all); 
   
