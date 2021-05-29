@@ -75,6 +75,13 @@
     rleg.scale.y = 0.7;
     rleg.position.set(-0.5,-0.8,-0.2);//x座標-0.3から-0.5に変更
     
+     //左足を作成
+    var leg_f = new THREE.SphereGeometry( 0.25, 32, 32 );
+    var lleg1 = new THREE.Mesh( leg_f, material);
+    lleg.scale.z = 1;
+    lleg.scale.y = 1;
+    lleg.position.set(0.3,-0.6,-0.2);
+    
     //左羽を作成
     var win_g = new THREE.SphereGeometry( 0.7, 32, 32 );
     var lwin = new THREE.Mesh( win_g, material);
