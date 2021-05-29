@@ -42,7 +42,8 @@
     var axis = new THREE.AxisHelper(5);
     axis.position.set(0,-0.8,0);             
 
-    var material = new THREE.MeshPhongMaterial({ color: 0xFF0000, ambient: 0x57001f, specular: 0xff4d00, shininess: 30, metal: true });
+    //マテリアルの作成
+    var material = new THREE.MeshPhongMaterial({ color: 0x6fb1ff, ambient: 0x213f83, specular: 0x83ffff, shininess: 30, metal: true });
 
     // 頭を作成
     var head_g = new THREE.SphereGeometry( 0.5, 32, 32 );
