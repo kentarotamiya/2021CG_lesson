@@ -109,12 +109,12 @@
     //左耳
     var ear_g = new THREE.SphereGeometry( 0.4, 32, 32 );
     var l_ear = new THREE.Mesh( ear_g, material);
-    l_ear.scale.z = 0.5;
+    l_ear.scale.z = 0.4;
     l_ear.position.set(0.4,1.3,0);
     
     //右耳
     var r_ear = new THREE.Mesh( ear_g, material);
-    r_ear.scale.z = 0.5;
+    r_ear.scale.z = 0.4;
     r_ear.position.set(-0.4,1.3,0);
 
     //鼻の作成
@@ -153,7 +153,7 @@
      koala.add(rleg1); //右足上部
   　　  koala.add(lleg1); //左足上部
      koala.add(l_ear); //左耳
-     //koala.add(r_ear); //右耳
+     koala.add(r_ear); //右耳
      koala.position.set(0,1,0);//ペンギングループの原点の位置
    
 
