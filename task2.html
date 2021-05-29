@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Pengin</title>
+  <title>第二回制作課題.1932087</title>
 
   <!-- three.jsを読み込む(ローカル) -->
   <!-- <script src="./three.js"></script> -->
@@ -137,29 +137,29 @@
     l_eye.position.set(-0.2,1.3,-0.35);
     
      //ペンギンのオブジェクト
-   const pengin = new THREE.Group();
-     pengin.add(axis);
-     pengin.add(head); // 頭を追加
-     pengin.add(body); //体を追加
-     pengin.add(lleg); //左足を追加
-     pengin.add(rleg); //右足を追加
-     pengin.add(lwin); //左羽を追加
-     pengin.add(rwin); //右羽を追加
-     pengin.add(beak); //くちばし
-     pengin.add(r_eye); //右目
-     pengin.add(l_eye); //左目
-     pengin.add(rleg1); //右足上部
-  　　  pengin.add(lleg1); //左足上部
-     pengin.add(l_ear); //左耳
-     pengin.add(r_ear); //左耳
-     pengin.position.set(0,1,0);//ペンギングループの原点の位置
+   const koala = new THREE.Group();
+     koala.add(axis);
+     koala.add(head); // 頭を追加
+     koala.add(body); //体を追加
+     koala.add(lleg); //左足を追加
+     koala.add(rleg); //右足を追加
+     koala.add(lwin); //左羽を追加
+     koala.add(rwin); //右羽を追加
+     koala.add(beak); //鼻
+     koala.add(r_eye); //右目
+     koala.add(l_eye); //左目
+     koala.add(rleg1); //右足上部
+  　　  koala.add(lleg1); //左足上部
+     koala.add(l_ear); //左耳
+     koala.add(r_ear); //左耳
+     koala.position.set(0,1,0);//ペンギングループの原点の位置
    
 
      //全体のオブジェクト
 
     const all = new THREE.Group();
      all.add(plane);//平面を追加
-     all.add(pengin); // ペンギンを追加
+     all.add(koala); // ペンギンを追加
      all.position.set(0,0,-5);//全体グループの原点の位置
     scene.add(all); 
   
