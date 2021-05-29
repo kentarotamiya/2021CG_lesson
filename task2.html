@@ -43,7 +43,7 @@
     axis.position.set(0,-0.8,0);             
 
     //マテリアルの作成
-    var material = new THREE.MeshPhongMaterial({ color: 0x3352ff, ambient: 0x0c3563, specular: 0x004dff, shininess: 30, metal: true });
+    var material = new THREE.MeshPhongMaterial({ color: 0x3352ff, ambient: 0x0c3563, specular: 0x0067ff, shininess: 30, metal: true });
 
     // 頭を作成
     var head_g = new THREE.SphereGeometry( 0.5, 32, 32 );
@@ -114,7 +114,7 @@
 
     //鼻の作成
     var beak_g = new THREE.SphereGeometry( 0.2, 0.5, 32 );//半径0.2に変更
-    var material_beak = new THREE.MeshPhongMaterial({ color: 0x0000e8, ambient: 0x0c3563, specular: 0x004dff, shininess: 30, metal: true });
+    var material_beak = new THREE.MeshPhongMaterial({ color: 0x0000e8, ambient: 0x0c3563, specular: 0x0067ff, shininess: 30, metal: true });
     var beak = new THREE.Mesh( beak_g, material_beak);
     beak.rotation.x = -1.5;
     beak.position.set(0, 1.05, -0.4);//Z軸座標を-0.6から-0.4に変更、Y軸座標を1から1.05に変更
