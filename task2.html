@@ -133,11 +133,11 @@
     var eye_g = new THREE.SphereGeometry( 0.1, 32, 32 );
     var material_eye = new THREE.MeshPhongMaterial({ color: 0xffffff });
     var r_eye = new THREE.Mesh( eye_g, material_eye);
-    r_eye.position.set(0.2,1.3,-0.4);//z軸座標を-0.3に変更
+    r_eye.position.set(0.3,1.3,-0.38);//x軸座標を0.3に、z軸座標を-0.37に変更
 
     //右目
     var l_eye = new THREE.Mesh( eye_g, material_eye);
-    l_eye.position.set(-0.2,1.3,-0.5);//z軸座標を-0.3に変更
+    l_eye.position.set(-0.3,1.3,-0.38);//x軸座標を-0.3に、z軸座標を-0.3に変更
     
      //ペンギンのオブジェクト
    const koala = new THREE.Group();
