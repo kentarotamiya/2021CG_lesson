@@ -113,7 +113,7 @@
     
     //右耳
     var r_ear = new THREE.Mesh( ear_g, material);
-    r_ear.position.set(-0.2,1.5,0);
+    r_ear.position.set(-0.3,1.57,0);
 
     //鼻の作成
     var beak_g = new THREE.SphereGeometry( 0.2, 0.5, 32 );//半径0.2に変更
@@ -151,6 +151,7 @@
      pengin.add(rleg1); //右足上部
   　　  pengin.add(lleg1); //左足上部
      pengin.add(l_ear); //左耳
+     pengin.add(r_ear); //左耳
      pengin.position.set(0,1,0);//ペンギングループの原点の位置
    
 
