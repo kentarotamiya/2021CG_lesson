@@ -48,8 +48,6 @@
 
   // 壁を作成
   var wall = new THREE.BoxGeometry(1, 1, 1);
-  //var material = new THREE.MeshPhongMaterial({ color: 0xffffff });
-  //var box = new THREE.Mesh(geometry, material);
   var box = new THREE.Mesh(geometry, mat);
   box.position.z = -5;
   scene.add(box);
@@ -63,13 +61,13 @@
    const house = new THREE.Group();
      house.add(roof); // 頭を追加
      house.add(wall); //体を追加
-     house.position.set(0,1,0);//ペンギングループの原点の位置
+     house.position.set(0,1,0);//家グループの原点の位置
    
 
      //全体のオブジェクト
     const all = new THREE.Group();
      all.add(plane);//平面を追加
-     all.add(house); // ペンギンを追加
+     all.add(house); // 家を追加
      all.position.set(0,0,-5);//全体グループの原点の位置
     scene.add(all); 
   
@@ -89,9 +87,10 @@
   var update = function() {
     requestAnimationFrame(update);
 
-    // 箱を回転させる
-    box.rotation.x += 0.01;
-    box.rotation.y += 0.01;
+    // 全体を回転させる
+        //all.rotation.x += 0.01;
+        all.rotation.y += 0.005;;
+  
 
     renderer.render(scene, camera);
   };
