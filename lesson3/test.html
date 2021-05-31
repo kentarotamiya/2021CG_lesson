@@ -34,6 +34,11 @@ var texture = textureLoader.load("stone2.jpeg");
 var mat = new THREE.MeshPhongMaterial();
 mat.map = texture;
 
+// バンプマップ読み込み
+  var bump = textureLoader.load("stone2-bump.jpeg");
+  mat.bumpMap = bump;
+  mat.bumpscale = 0.4;
+    
 // 箱を作成
 var geometry = new THREE.BoxGeometry(1, 1, 1);
 //var material = new THREE.MeshPhongMaterial({ color: 0xffffff });
