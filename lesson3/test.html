@@ -8,6 +8,7 @@
   <!-- <script src="./three.js"></script> -->
   <!-- three.jsを読み込む(CDN) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js"></script>
+  <script src="OrbitControls.js"></script>
 
 </head>
 <body>
@@ -28,7 +29,7 @@
     // カメラを作成
   var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
     // カメラコントローラーを作成
-        //const controls = new THREE.OrbitControls(camera,document.body);
+  const controls = new THREE.OrbitControls(camera,document.body);
 
 // テクスチャー読み込み
 var textureLoader = new THREE.TextureLoader();  
@@ -66,16 +67,24 @@ directionalLight3.position.set(1, -10, 1);
 scene.add(directionalLight3);
     
 // 初回実行
-  var update = function() {
-    requestAnimationFrame(update);
+  //var update = function() {
+    //requestAnimationFrame(update);
 
     // 箱を回転させる
-    box.rotation.x += 0.01;
-    box.rotation.y += 0.01;
+    //box.rotation.x += 0.01;
+    //box.rotation.y += 0.01;
 
-    renderer.render(scene, camera);
-  };
-  update();
+    //renderer.render(scene, camera);
+  //};
+  //update();
+ tick();
+
+  // 毎フレーム時に実行されるループイベントです
+  function tick() {
+  // レンダリング
+     renderer.render(scene, camera);
+     requestAnimationFrame(tick);
+  }
 }
   window.addEventListener('DOMContentLoaded', init);
 </script>
