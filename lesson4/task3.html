@@ -45,6 +45,14 @@
         var texture = textureLoader.load("img/earth.png");
         var mat = new THREE.MeshPhongMaterial();
         mat.map = texture;
+        
+        // 平面を作成
+        var planeGeometry = new THREE.PlaneGeometry(5,5,5,5);
+        var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
+        var plane = new THREE.Mesh(planeGeometry,planeMaterial);
+        plane.rotation.set( -Math.PI/2, 0, 0 );
+        plane.position.set(0,0,0);
+        scene.add(plane);
 
         // 地球を作成(原点に作成)
         var geometry = new THREE.SphereGeometry(300, 30, 30);
