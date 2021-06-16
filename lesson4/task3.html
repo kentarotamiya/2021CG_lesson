@@ -56,13 +56,14 @@
         scene.add(box);
         
         //壁1
+        var textureLoader = new THREE.TextureLoader(); 
         const geometry = new THREE.PlaneGeometry( 1, 1 );
         const material = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} );
         const plane1 = new THREE.Mesh( geometry, material );
         scene.add( plane1 );
 
         // 木0をスプライトで作成
-        var textureLoader = new THREE.TextureLoader();  
+        //var textureLoader = new THREE.TextureLoader();  
         var texture0 = textureLoader.load("img/tree0.png");
         const material0 = new THREE.SpriteMaterial({ map: texture0,});
 
