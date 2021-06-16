@@ -55,13 +55,22 @@
         //var box = new THREE.Mesh(geometry, material);
         //scene.add(box);
         
-         // 平面を作成
+         // 平面を作成床
          var planeGeometry = new THREE.PlaneGeometry(80,80,5,5);
          var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
          var plane = new THREE.Mesh(planeGeometry,planeMaterial);
          plane.rotation.set( -Math.PI/2, 0, 0 );
          plane.position.set(0,0,0);
          scene.add(plane);
+        
+        // 平面を作成
+         //var planeGeometry = new THREE.PlaneGeometry(80,80,5,5);
+         var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
+         var plane2 = new THREE.Mesh(planeGeometry,planeMaterial);
+         plane2.rotation.set( -Math.PI/2, 0, 0 );
+         plane2.position.set(0,0,0);
+         plane2.rotation.x =1.57
+         scene.add(plane2);
 
         // 木0をスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
