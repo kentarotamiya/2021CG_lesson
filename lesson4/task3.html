@@ -63,7 +63,7 @@
          plane.position.set(0,0,0);
          scene.add(plane);
         
-        // 平面を作成
+         // 平面を作成　 壁1
          //var planeGeometry = new THREE.PlaneGeometry(80,80,5,5);
          var planeMaterial = new THREE.MeshBasicMaterial({color: 0xffff00});
          var plane2 = new THREE.Mesh(planeGeometry,planeMaterial);
@@ -72,7 +72,7 @@
          plane2.rotation.y =1.57
          scene.add(plane2);
         
-        // 平面を作成
+         // 平面を作成 壁２
          //var planeGeometry = new THREE.PlaneGeometry(80,80,5,5);
          var planeMaterial = new THREE.MeshBasicMaterial({color: 0xffffff});
          var plane3 = new THREE.Mesh(planeGeometry,planeMaterial);
@@ -81,7 +81,7 @@
          plane3.rotation.y =-1.57
          scene.add(plane3);
         
-        // 平面を作成
+         // 平面を作成 壁3
          //var planeGeometry = new THREE.PlaneGeometry(80,80,5,5);
          var planeMaterial = new THREE.MeshBasicMaterial({color: 0x0000ff});
          var plane4 = new THREE.Mesh(planeGeometry,planeMaterial);
@@ -90,7 +90,7 @@
          plane4.rotation.set(0,0,1.57);
          scene.add(plane4);
         
-        // 平面を作成
+         // 平面を作成　壁4
          //var planeGeometry = new THREE.PlaneGeometry(80,80,5,5);
          var planeMaterial = new THREE.MeshBasicMaterial({color: 0xff0000});
          var plane5 = new THREE.Mesh(planeGeometry,planeMaterial);
@@ -99,11 +99,20 @@
          plane5.rotation.set(-3.14,0,1.57);
          scene.add(plane5);
         
+         // 平面を作成 屋根
+         //var planeGeometry = new THREE.PlaneGeometry(80,80,5,5);
+         var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
+         var plane2 = new THREE.Mesh(planeGeometry,planeMaterial);
+         plane2.rotation.set( -Math.PI/2, 0, 0 );
+         plane2.position.set(35,35,0);
+         plane2.rotation.y =0.785
+         scene.add(plane2);
+        
         //三角形
         var geometry = new THREE.Geometry();
         geometry.vertices[0] = new THREE.Vector3(-35,70,35);
         geometry.vertices[1] = new THREE.Vector3(35,70,35);
-        geometry.vertices[2] = new THREE.Vector3(0,90,35);  
+        geometry.vertices[2] = new THREE.Vector3(0,105,35);  
         geometry.faces[0] = new THREE.Face3(0,1,2);
         var material =  new THREE.MeshBasicMaterial({ color: 0xff0000 });
         var Tr =  new THREE.Mesh(geometry,material); 
@@ -113,7 +122,7 @@
         var geometry1 = new THREE.Geometry();
         geometry1.vertices[0] = new THREE.Vector3(-35,70,35);
         geometry1.vertices[1] = new THREE.Vector3(35,70,35);
-        geometry1.vertices[2] = new THREE.Vector3(0,90,35);  
+        geometry1.vertices[2] = new THREE.Vector3(0,105,35);  
         geometry1.faces[0] = new THREE.Face3(0,1,2);
         var material =  new THREE.MeshBasicMaterial({ color: 0xffff00 });
         var Tr1 =  new THREE.Mesh(geometry1,material); 
