@@ -96,7 +96,7 @@
          var plane5 = new THREE.Mesh(planeGeometry,planeMaterial);
          plane5.rotation.set( -Math.PI/2, 0, 0 );
          plane5.position.set(0,35,-35);
-         plane5.rotation.set(0,0,3.14);
+         plane5.rotation.set(-1.57,0,1.57);
          scene.add(plane5);
         
         // 木0をスプライトで作成
@@ -120,7 +120,7 @@
         sprite1.position.y = 50;
         sprite1.position.z = -100;
         sprite1.scale.set(100,100,100);
-        //scene.add(sprite1);
+        scene.add(sprite1);
 
         // 木1をスプライトで作成 
         var texture2 = textureLoader.load("img/tree2.png");
