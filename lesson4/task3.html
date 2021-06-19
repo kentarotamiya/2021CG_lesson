@@ -102,9 +102,12 @@
          scene.add(plane8);
         
         // 平面を作成　窓
+        　var texture = textureLoader.load("img/window.jpeg");
+       　　 var mat2 = new THREE.MeshPhongMaterial();
+       　　　 mat2.map = texture;
          var planeGeometry9 = new THREE.PlaneGeometry(15,15,5,5);
-         var planeMaterial9 = new THREE.MeshBasicMaterial({color: 0xffffff});
-         var plane9 = new THREE.Mesh(planeGeometry9,planeMaterial9);
+         //var planeMaterial9 = new THREE.MeshBasicMaterial({color: 0xffffff});
+         var plane9 = new THREE.Mesh(planeGeometry9,mat2);
          plane9.rotation.set( -Math.PI/2, 0, 0 );
          plane9.position.set(0,83,35.1);
          plane9.rotation.set(0,0,1.57);
@@ -112,7 +115,7 @@
         
         //窓2
         //var planeMaterial = new THREE.MeshBasicMaterial({color: 0xff0000});
-         var plane10 = new THREE.Mesh(planeGeometry9,planeMaterial9);
+         var plane10 = new THREE.Mesh(planeGeometry9,mat2);
          plane10.rotation.set( -Math.PI/2, 0, 0 );
          plane10.position.set(0,83,-35.1);
          plane10.rotation.set(-3.14,0,1.57);
