@@ -111,9 +111,9 @@
         
         //三角形
         var geometry1 = new THREE.Geometry();
-        geometry1.vertices[0] = new THREE.Vector3(-35,70,0);
-        geometry1.vertices[1] = new THREE.Vector3(35,70,0);
-        geometry1.vertices[2] = new THREE.Vector3(0,90,0);  
+        geometry1.vertices[0] = new THREE.Vector3(-35,70,35);
+        geometry1.vertices[1] = new THREE.Vector3(35,70,35);
+        geometry1.vertices[2] = new THREE.Vector3(0,90,35);  
         geometry1.faces[0] = new THREE.Face3(0,1,2);
         var material =  new THREE.MeshBasicMaterial({ color: 0xffff00 });
         var Tr1 =  new THREE.Mesh(geometry1,material); 
