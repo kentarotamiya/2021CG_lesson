@@ -111,6 +111,14 @@
          plane9.rotation.set(0,0,1.57);
          scene.add(plane9);
         
+        //窓2
+        //var planeMaterial = new THREE.MeshBasicMaterial({color: 0xff0000});
+         var plane10 = new THREE.Mesh(planeGeometry9,planeMaterial9);
+         plane10.rotation.set( -Math.PI/2, 0, 0 );
+         plane10.position.set(0,35,-35);
+         plane10.rotation.set(-3.14,0,1.57);
+         scene.add(plane10);
+        
          // 平面を作成 屋根1
          var planeGeometry1 = new THREE.PlaneGeometry(67.3,75,5,5);
          var planeMaterial = new THREE.MeshBasicMaterial({color: 0xff00ff});
