@@ -145,7 +145,7 @@
         cylinder1.position.x = 35;
         cylinder1.position.y = 19;
         cylinder1.position.z = 55;
-        cylinder1.rotation.y =0.785;
+        //cylinder1.rotation.y =0.785;
         cylinder1.rotation.z =0.4;
 　　　　　　　　　　　　　　　　scene.add(cylinder1);
         
@@ -156,7 +156,7 @@
         cylinder2.position.x = 28;
         cylinder2.position.y = 19;
         cylinder2.position.z = 64;
-        cylinder2.rotation.y =0.785;
+        //cylinder2.rotation.y =0.785;
         cylinder2.rotation.z =-0.4;
 　　　　　　　　　　　　　　　　scene.add(cylinder2);
         
@@ -165,7 +165,7 @@
         cylinder3.position.x = 65;
         cylinder3.position.y = 19;
         cylinder3.position.z = 55;
-        cylinder3.rotation.y =0.785;
+        //cylinder3.rotation.y =0.785;
         cylinder3.rotation.z =0.4;
 　　　　　　　　　　　　　　　　scene.add(cylinder3);
         
@@ -174,9 +174,16 @@
         cylinder4.position.x = 58;
         cylinder4.position.y = 19;
         cylinder4.position.z = 64;
-        cylinder4.rotation.y =0.785;
+        //cylinder4.rotation.y =0.785;
         cylinder4.rotation.z =-0.4;
 　　　　　　　　　　　　　　　　scene.add(cylinder4);
+        
+        const swing = new THREE.Group();
+     　　　　　 swing.add(cylinder1); // 柱1を追加
+        swing.add(cylinder2); // 柱2を追加
+        swing.add(cylinder3); // 柱3を追加
+        swing.add(cylinder4); // 柱4を追加
+     　　　　　　swing.position.set(0,1,0);
         
         // 木0をスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
