@@ -99,6 +99,17 @@
          plane5.rotation.set(-3.14,0,1.57);
          scene.add(plane5);
         
+        // 三角を作る
+     　　　 var material = new THREE.MeshBasicMaterial( { color: 0xeeee00 } );
+     　　　 var shape = new THREE.Shape();
+     　　　　　shape.moveTo(  0, 100 );
+     　　　　　shape.lineTo(  100, -50 );
+      　　　shape.lineTo( -100, -50 );
+      　　　shape.lineTo(  0, 100 );
+      　　　var geometry = new THREE.ShapeGeometry( shape );
+      　　　scene.add( new THREE.Mesh( geometry, material ) );
+
+        
         // 木0をスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
         var texture0 = textureLoader.load("img/tree0.png");
