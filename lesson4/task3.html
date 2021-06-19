@@ -105,11 +105,20 @@
         geometry.vertices[1] = new THREE.Vector3(35,70,35);
         geometry.vertices[2] = new THREE.Vector3(0,90,35);  
         geometry.faces[0] = new THREE.Face3(0,1,2);
-        var material =  new THREE.MeshBasicMaterial({ color: 0x0000ff });
+        var material =  new THREE.MeshBasicMaterial({ color: 0xff0000 });
         var Triangle =  new THREE.Mesh(geometry,material); 
+        scene.add(Triangle); 
+        
+        //三角形
+        var geometry1 = new THREE.Geometry();
+        geometry.vertices[0] = new THREE.Vector3(-35,70,-35);
+        geometry.vertices[1] = new THREE.Vector3(35,70,-35);
+        geometry.vertices[2] = new THREE.Vector3(0,90,-35);  
+        geometry.faces[0] = new THREE.Face3(0,1,2);
+        var material =  new THREE.MeshBasicMaterial({ color: 0x0000ff });
+        var Triangle =  new THREE.Mesh(geometry1,material); 
         scene.add(Triangle);     
 
-        
         // 木0をスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
         var texture0 = textureLoader.load("img/tree0.png");
