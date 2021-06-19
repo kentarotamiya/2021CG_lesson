@@ -109,7 +109,7 @@
         var Triangle =  new THREE.Mesh(geometry,material); 
         scene.add(Triangle); 
         
-        //三角形
+        //三角形2
         var geometry1 = new THREE.Geometry();
         geometry1.vertices[0] = new THREE.Vector3(-35,70,-35);
         geometry1.vertices[1] = new THREE.Vector3(35,70,-35);
@@ -117,6 +117,7 @@
         geometry1.faces[0] = new THREE.Face3(0,1,2);
         var material1 =  new THREE.MeshBasicMaterial({ color: 0x0000ff });
         var Triangle1 =  new THREE.Mesh(geometry1,material1); 
+        Triangle1.rotation.y =3.14
         scene.add(Triangle1);     
 
         // 木0をスプライトで作成
