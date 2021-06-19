@@ -60,6 +60,18 @@
       scene.add(axisHelper);
         
         var textureLoader = new THREE.TextureLoader();  
+        
+         var planeGeometry = new THREE.PlaneGeometry(150,150,5,5);
+        　　var texture = textureLoader.load("img/wall2.jpeg");
+       　　 var mat = new THREE.MeshPhongMaterial();
+       　　　 mat.map = texture;
+         var bump = textureLoader.load("wall2bump.jpg");
+         mat.bumpMap = bump;
+         mat.bumpscale = 0.1;
+         var plane = new THREE.Mesh(planeGeometry,mat);
+         plane.rotation.set( -Math.PI/2, 0, 0 );
+         plane.position.set(0,0,0);
+         scene.add(plane);
                
          // 平面を作成床
          var planeGeometry = new THREE.PlaneGeometry(70,70,5,5);
