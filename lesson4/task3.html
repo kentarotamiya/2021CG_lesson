@@ -109,16 +109,7 @@
         var Tr =  new THREE.Mesh(geometry,material); 
         scene.add(Tr); 
         
-        //三角形2
-        var geometry1 = new THREE.Geometry();
-        geometry.vertices[3] = new THREE.Vector3(-35,70,-35);
-        geometry.vertices[4] = new THREE.Vector3(35,70,-35);
-        geometry.vertices[5] = new THREE.Vector3(0,90,-35);  
-        geometry.faces[1] = new THREE.Face3(3,4,5);
-        var material =  new THREE.MeshBasicMaterial({ color: 0xff00ff });
-        var Tr1 =  new THREE.Mesh(geometry,material); 
-        //Triangle1.rotation.y =3.14
-        scene.add(Tr1);     
+        
 
         // 木0をスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
