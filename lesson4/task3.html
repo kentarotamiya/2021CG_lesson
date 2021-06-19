@@ -53,7 +53,7 @@
                
          // 平面を作成床
          var planeGeometry = new THREE.PlaneGeometry(70,70,5,5);
-        　　var texture = textureLoader.load("img/wall1.jpeg");
+        　　var texture = textureLoader.load("img/wall2.jpeg");
        　　 var mat = new THREE.MeshPhongMaterial();
        　　　 mat.map = texture;
          var plane = new THREE.Mesh(planeGeometry,mat);
@@ -122,10 +122,10 @@
          scene.add(plane10);
         
          // 平面を作成 屋根1
-        　var texture = textureLoader.load("img/ceil2.jpeg");
+        　var texture = textureLoader.load("img/ceil.jpeg");
        　　 var mat3 = new THREE.MeshPhongMaterial();
        　　　 mat3.map = texture;
-         var bump = textureLoader.load("ceil2bump.jpg");
+         var bump = textureLoader.load("ceilbump.jpg");
          mat3.bumpMap = bump;
          mat3.bumpscale = 0.4;
          var planeGeometry1 = new THREE.PlaneGeometry(67.3,75,5,5);
