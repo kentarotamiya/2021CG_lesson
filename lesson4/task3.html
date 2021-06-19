@@ -161,6 +161,9 @@
         geometry.vertices[1] = new THREE.Vector3(35,70,35);
         geometry.vertices[2] = new THREE.Vector3(0,105,35);  
         geometry.faces[0] = new THREE.Face3(0,1,2);
+        var texture = textureLoader.load("img/wall2.jpeg");
+       　　 var mat = new THREE.MeshPhongMaterial();
+       　　　 mat.map = texture;
         //var material =  new THREE.MeshBasicMaterial({ color: 0xff0000 });
         var Tr =  new THREE.Mesh(geometry,mat); 
         scene.add(Tr); 
