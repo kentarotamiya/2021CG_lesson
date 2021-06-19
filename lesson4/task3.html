@@ -99,15 +99,15 @@
          plane5.rotation.set(-3.14,0,1.57);
          scene.add(plane5);
         
-        // 三角を作る
-     　　　 var material = new THREE.MeshBasicMaterial( { color: 0xeeee00 } );
-     　　　 var shape = new THREE.Shape();
-     　　　　　shape.moveTo(  0, 100 );
-     　　　　　shape.lineTo(  100, -50 );
-      　　　shape.lineTo( -100, -50 );
-      　　　shape.lineTo(  0, 100 );
-      　　　var geometry = new THREE.ShapeGeometry( shape );
-      　　　scene.add( new THREE.Mesh( geometry, material ) );
+        //三角形
+        var geometry = new THREE.Geometry();
+        geometry.vertices[0] = new THREE.Vector3(150,0,0);
+        geometry.vertices[1] = new THREE.Vector3(0,150,0);
+        geometry.vertices[2] = new THREE.Vector3(0,0,150);  
+        geometry.faces[0] = new THREE.Face3(0,1,2);
+        var material =  new THREE.MeshBasicMaterial({ color: 0x0000ff });
+        var Triangle =  new THREE.Mesh(geometry,material); 
+        scene.add(Triangle);     
 
         
         // 木0をスプライトで作成
