@@ -100,9 +100,9 @@
          scene.add(plane5);
         
          // 平面を作成 屋根1
-         //var planeGeometry = new THREE.PlaneGeometry(80,80,5,5);
+         var planeGeometry1 = new THREE.PlaneGeometry(80,100,5,5);
          var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
-         var plane2 = new THREE.Mesh(planeGeometry,planeMaterial);
+         var plane2 = new THREE.Mesh(planeGeometry1,planeMaterial);
          plane2.rotation.set( -Math.PI/2, 0, 0 );
          plane2.position.set(35,70,0);
          plane2.rotation.y =0.785
@@ -111,7 +111,7 @@
         // 平面を作成 屋根2
          //var planeGeometry = new THREE.PlaneGeometry(80,80,5,5);
          var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ffff});
-         var plane2 = new THREE.Mesh(planeGeometry,planeMaterial);
+         var plane2 = new THREE.Mesh(planeGeometry1,planeMaterial);
          plane2.rotation.set( -Math.PI/2, 0, 0 );
          plane2.position.set(-35,70,0);
          plane2.rotation.y =-0.785
