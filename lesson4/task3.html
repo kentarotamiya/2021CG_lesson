@@ -69,7 +69,7 @@
          var plane2 = new THREE.Mesh(planeGeometry,planeMaterial);
          plane2.rotation.set( -Math.PI/2, 0, 0 );
          plane2.position.set(35,35,0);
-         plane2.rotation.y =1.57
+         plane2.rotation.y =1.57;
          scene.add(plane2);
         
          // 平面を作成 壁２
@@ -78,7 +78,7 @@
          var plane3 = new THREE.Mesh(planeGeometry,planeMaterial);
          plane3.rotation.set( -Math.PI/2, 0, 0 );
          plane3.position.set(-35,35,0);
-         plane3.rotation.y =-1.57
+         plane3.rotation.y =-1.57;
          scene.add(plane3);
         
          // 平面を作成 壁3
@@ -105,7 +105,7 @@
          var plane2 = new THREE.Mesh(planeGeometry1,planeMaterial);
          plane2.rotation.set( -Math.PI/2, 0, 0 );
          plane2.position.set(23.8,81.2,0);
-         plane2.rotation.y =0.785
+         plane2.rotation.y =0.785;
          scene.add(plane2);
         
         // 平面を作成 屋根2
@@ -114,7 +114,7 @@
          var plane2 = new THREE.Mesh(planeGeometry1,planeMaterial);
          plane2.rotation.set( -Math.PI/2, 0, 0 );
          plane2.position.set(-23.8,81.2,0);
-         plane2.rotation.y =-0.785
+         plane2.rotation.y =-0.785;
          scene.add(plane2);
         
         
@@ -141,12 +141,14 @@
         scene.add(Tr1); 
         
         //ブランコ柱1
-        const cylinderGeometry = new THREE.CylinderGeometry( 5, 5, 20, 32 );
+        const cylinderGeometry = new THREE.CylinderGeometry( 1, 1, 30, 32 );
 　　　　　　　　　　　　　　　　const cylinderMaterial = new THREE.MeshBasicMaterial( {color: 0xFF0000} );
 　　　　　　　　　　　　　　　　const cylinder1 = new THREE.Mesh( cylinderGeometry, cylinderMaterial);
         cylinder1.position.x = 35;
-        cylinder1.position.y = 0;
+        cylinder1.position.y = 15;
         cylinder1.position.z = 45;
+        plane2.rotation.y =0.785;
+        plane2.rotation.z =0.785
 　　　　　　　　　　　　　　　　scene.add(cylinder1);
         
         
