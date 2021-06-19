@@ -102,20 +102,20 @@
          // 平面を作成 屋根1
          var planeGeometry1 = new THREE.PlaneGeometry(67.3,75,5,5);
          var planeMaterial = new THREE.MeshBasicMaterial({color: 0xff00ff});
-         var plane2 = new THREE.Mesh(planeGeometry1,planeMaterial);
-         plane2.rotation.set( -Math.PI/2, 0, 0 );
-         plane2.position.set(23.8,81.2,0);
-         //plane2.rotation.y =0.785
-         scene.add(plane2);
+         var plane6 = new THREE.Mesh(planeGeometry1,planeMaterial);
+         plane6.rotation.set( -Math.PI/2, 0, 0 );
+         plane6.position.set(23.8,81.2,0);
+         plane6.rotation.y =0.785;
+         scene.add(plane6);
         
         // 平面を作成 屋根2
-         //var planeGeometry = new THREE.PlaneGeometry(80,80,5,5);
+         var planeGeometry = new THREE.PlaneGeometry(80,80,5,5);
          var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ffff});
-         var plane2 = new THREE.Mesh(planeGeometry1,planeMaterial);
-         plane2.rotation.set( -Math.PI/2, 0, 0 );
-         plane2.position.set(-23.8,81.2,0);
-         //plane2.rotation.y =-0.785;
-         scene.add(plane2);
+         var plane7 = new THREE.Mesh(planeGeometry1,planeMaterial);
+         plane7.rotation.set( -Math.PI/2, 0, 0 );
+         plane7.position.set(-23.8,81.2,0);
+         plane7.rotation.y =-0.785;
+         scene.add(plane7);
         
         
         
@@ -148,7 +148,7 @@
         cylinder1.position.y = 15;
         cylinder1.position.z = 45;
         plane2.rotation.y =0.785;
-        plane2.rotation.z =0.785
+        plane2.rotation.z =0.785;
 　　　　　　　　　　　　　　　　scene.add(cylinder1);
         
         
