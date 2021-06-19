@@ -50,16 +50,13 @@
       scene.add(axisHelper);
         
         var textureLoader = new THREE.TextureLoader();  
-        var texture = textureLoader.load("img/earth.png");
-        var mat = new THREE.MeshPhongMaterial();
-        mat.map = texture;
                
          // 平面を作成床
          var planeGeometry = new THREE.PlaneGeometry(70,70,5,5);
-        　　var planeMaterial = textureLoader.load("img/.png");
+        　　var texture = textureLoader.load("img/wall.jpeg");
        　　 var mat = new THREE.MeshPhongMaterial();
        　　　 mat.map = texture;
-         var plane = new THREE.Mesh(planeGeometry,planeMaterial);
+         var plane = new THREE.Mesh(planeGeometry,mat);
          plane.rotation.set( -Math.PI/2, 0, 0 );
          plane.position.set(0,0,0);
          scene.add(plane);
