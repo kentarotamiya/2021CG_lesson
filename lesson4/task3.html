@@ -130,7 +130,7 @@
         var material =  new THREE.MeshBasicMaterial({ color: 0xffff00 });
         var Tr1 =  new THREE.Mesh(geometry1,material); 
         Tr1.rotation.set(0,3.14,0);
-        //scene.add(Tr1); 
+        scene.add(Tr1); 
         
         //ブランコ柱1
         const cylinderGeometry = new THREE.CylinderGeometry( 1, 1, 40, 32 );
