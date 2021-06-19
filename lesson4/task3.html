@@ -66,6 +66,9 @@
         　　var texture = textureLoader.load("img/wall2.jpeg");
        　　 var mat = new THREE.MeshPhongMaterial();
        　　　 mat.map = texture;
+         var bump = textureLoader.load("wall2bump.jpg");
+         mat.bumpMap = bump;
+         mat.bumpscale = 1;
          var plane = new THREE.Mesh(planeGeometry,mat);
          plane.rotation.set( -Math.PI/2, 0, 0 );
          plane.position.set(0,0,0);
@@ -100,9 +103,12 @@
          scene.add(plane5);
         
         // 平面を作成　扉
-        　var texture = textureLoader.load("img/door3.jpeg");
+        　var texture = textureLoader.load("img/door4.jpeg");
        　　 var mat1 = new THREE.MeshPhongMaterial();
        　　　 mat1.map = texture;
+         var bump = textureLoader.load("door4bump.jpg");
+         mat1.bumpMap = bump;
+         mat1.bumpscale = 1;
          var planeGeometry8 = new THREE.PlaneGeometry(45,24,5,5);
          //var planeMaterial8 = new THREE.MeshBasicMaterial({color: 0xffffff});
          var plane8 = new THREE.Mesh(planeGeometry8,mat1);
@@ -112,9 +118,12 @@
          scene.add(plane8);
         
         // 平面を作成　窓
-        　var texture = textureLoader.load("img/window.jpeg");
+        　var texture = textureLoader.load("img/window2.jpeg");
        　　 var mat2 = new THREE.MeshPhongMaterial();
        　　　 mat2.map = texture;
+         var bump = textureLoader.load("window2bump.jpg");
+         mat2.bumpMap = bump;
+         mat2.bumpscale = 1;
          var planeGeometry9 = new THREE.PlaneGeometry(15,15,5,5);
          //var planeMaterial9 = new THREE.MeshBasicMaterial({color: 0xffffff});
          var plane9 = new THREE.Mesh(planeGeometry9,mat2);
@@ -183,6 +192,9 @@
         　var texture = textureLoader.load("img/swing.jpeg");
        　　 var mat4 = new THREE.MeshPhongMaterial();
        　　　 mat4.map = texture;
+         var bump = textureLoader.load("swingbump.jpg");
+         mat4.bumpMap = bump;
+         mat4.bumpscale = 1;
         const cylinderGeometry = new THREE.CylinderGeometry( 1, 1, 40, 32 );
 　　　　　　　　　　　　　　　　//const cylinderMaterial = new THREE.MeshBasicMaterial( {color: 0xff0000} );
 　　　　　　　　　　　　　　　　const cylinder1 = new THREE.Mesh( cylinderGeometry, mat4);
@@ -232,6 +244,9 @@
         　var texture = textureLoader.load("img/rope.jpeg");
        　　 var mat5 = new THREE.MeshPhongMaterial();
        　　　 mat5.map = texture;
+         var bump = textureLoader.load("ropebump.jpg");
+         mat5.bumpMap = bump;
+         mat5.bumpscale = 1;
         const cylinderGeometry1 = new THREE.CylinderGeometry( 0.3, 0.3, 26, 32 );
 　　　　　　　　　　　　　　　　//const cylinderMaterial1 = new THREE.MeshBasicMaterial( {color: 0xff0000} );
 　　　　　　　　　　　　　　　　const cylinder6 = new THREE.Mesh( cylinderGeometry1, mat5);
@@ -249,6 +264,9 @@
         　var texture = textureLoader.load("img/swing1.jpeg");
        　　 var mat6 = new THREE.MeshPhongMaterial();
        　　　 mat6.map = texture;
+         var bump = textureLoader.load("swing1bump.jpg");
+         mat6.bumpMap = bump;
+         mat6.bumpscale = 1;
         const cubeGeometry = new THREE.BoxGeometry(11, 0.5, 5);
         //const cubeMaterial = new THREE.MeshBasicMaterial( {color: 0xff0000} );
         const cube = new THREE.Mesh( cubeGeometry, mat6);
