@@ -142,8 +142,8 @@
         
         //ブランコ柱1
         const geometry = new THREE.CylinderGeometry( 5, 5, 20, 32 );
-　　　　　　　　　　　　　　　　const material = new THREE.MeshBasicMaterial( {color: 0xFF0000} );
-　　　　　　　　　　　　　　　　const cylinder1 = new THREE.Mesh( geometry, material );
+　　　　　　　　　　　　　　　　const cylinderMaterial = new THREE.MeshBasicMaterial( {color: 0xFF0000} );
+　　　　　　　　　　　　　　　　const cylinder1 = new THREE.Mesh( geometry, cylinderMaterial);
         cylinder1.position.x = 35;
         cylinder1.position.y = 0;
         cylinder1.position.z = 45;
