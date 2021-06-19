@@ -94,13 +94,22 @@
          scene.add(plane5);
         
         // 平面を作成　扉
-         var planeGeometry9 = new THREE.PlaneGeometry(20,45,5,5);
-         var planeMaterial9 = new THREE.MeshBasicMaterial({color: 0xffffff});
-         var plane8 = new THREE.Mesh(planeGeometry9,planeMaterial9);
+         var planeGeometry8 = new THREE.PlaneGeometry(20,45,5,5);
+         var planeMaterial8 = new THREE.MeshBasicMaterial({color: 0xffffff});
+         var plane8 = new THREE.Mesh(planeGeometry8,planeMaterial8);
          plane8.rotation.set( -Math.PI/2, 0, 0 );
          plane8.position.set(0,22.5,35.1);
          plane8.rotation.set(0,0,1.57);
          scene.add(plane8);
+        
+        // 平面を作成　窓
+         var planeGeometry9 = new THREE.PlaneGeometry(15,15,5,5);
+         var planeMaterial9 = new THREE.MeshBasicMaterial({color: 0xffffff});
+         var plane9 = new THREE.Mesh(planeGeometry9,planeMaterial9);
+         plane9.rotation.set( -Math.PI/2, 0, 0 );
+         plane9.position.set(0,55,35.1);
+         plane9.rotation.set(0,0,1.57);
+         scene.add(plane9);
         
          // 平面を作成 屋根1
          var planeGeometry1 = new THREE.PlaneGeometry(67.3,75,5,5);
