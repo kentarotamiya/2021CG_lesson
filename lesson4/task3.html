@@ -117,6 +117,8 @@
          plane2.rotation.y =-0.785
          scene.add(plane2);
         
+        
+        
         //三角形
         var geometry = new THREE.Geometry();
         geometry.vertices[0] = new THREE.Vector3(-35,70,35);
@@ -137,6 +139,15 @@
         var Tr1 =  new THREE.Mesh(geometry1,material); 
         Tr1.rotation.set(0,3.14,0);
         scene.add(Tr1); 
+        
+        //ブランコ柱1
+        const geometry = new THREE.CylinderGeometry( 5, 5, 20, 32 );
+　　　　　　　　　　　　　　　　const material = new THREE.MeshBasicMaterial( {color: 0xFF0000} );
+　　　　　　　　　　　　　　　　const cylinder1 = new THREE.Mesh( geometry, material );
+        cylinder1.position.x = 35;
+        cylinder1.position.y = 0;
+        cylinder1.position.z = 45;
+　　　　　　　　　　　　　　　　scene.add(cylinder1);
         
         
         // 木0をスプライトで作成
