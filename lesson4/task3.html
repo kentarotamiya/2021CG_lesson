@@ -206,7 +206,7 @@
         cube.position.x = 50;
         cube.position.y = 9;
         cube.position.z = 59.5;
-        scene.add( cube );
+        //scene.add( cube );
         
         const swing = new THREE.Group();
      　　　　　 swing.add(cylinder1); // 柱1を追加
@@ -216,6 +216,7 @@
         swing.add(cylinder5); // 柱5を追加
         swing.add(cylinder6); // 縄1を追加
         swing.add(cylinder7); // 縄2を追加
+        swing.add(cube); // 板を追加
      　　　　　　swing.position.set(0,1,0);
         //scene.add(swing);
         
