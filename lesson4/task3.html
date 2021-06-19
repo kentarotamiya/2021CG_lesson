@@ -122,12 +122,12 @@
          scene.add(plane10);
         
          // 平面を作成 屋根1
-        　var texture = textureLoader.load("img/ceil.jpeg");
+        　var texture = textureLoader.load("img/ceil2.jpeg");
        　　 var mat3 = new THREE.MeshPhongMaterial();
        　　　 mat3.map = texture;
-         //var bump = textureLoader.load("ceilbump.jpg");
-         //mat3.bumpMap = bump;
-         //mat3.bumpscale = 0.4;
+         var bump = textureLoader.load("ceilbump2.jpg");
+         mat3.bumpMap = bump;
+         mat3.bumpscale = 1;
          var planeGeometry1 = new THREE.PlaneGeometry(67.3,75,5,5);
          //var planeMaterial = new THREE.MeshBasicMaterial({color: 0xff00ff});
          var plane6 = new THREE.Mesh(planeGeometry1,mat3);
