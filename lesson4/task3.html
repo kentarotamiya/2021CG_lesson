@@ -122,9 +122,12 @@
          scene.add(plane10);
         
          // 平面を作成 屋根1
+        　var texture = textureLoader.load("img/ceil.jpeg");
+       　　 var mat3 = new THREE.MeshPhongMaterial();
+       　　　 mat3.map = texture;
          var planeGeometry1 = new THREE.PlaneGeometry(67.3,75,5,5);
-         var planeMaterial = new THREE.MeshBasicMaterial({color: 0xff00ff});
-         var plane6 = new THREE.Mesh(planeGeometry1,planeMaterial);
+         //var planeMaterial = new THREE.MeshBasicMaterial({color: 0xff00ff});
+         var plane6 = new THREE.Mesh(planeGeometry1,mat3);
          plane6.rotation.set( -Math.PI/2, 0, 0 );
          plane6.position.set(23.8,81.2,0);
          plane6.rotation.y =0.785;
@@ -132,8 +135,8 @@
         
         // 平面を作成 屋根2
          var planeGeometry = new THREE.PlaneGeometry(80,80,5,5);
-         var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ffff});
-         var plane7 = new THREE.Mesh(planeGeometry1,planeMaterial);
+         //var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ffff});
+         var plane7 = new THREE.Mesh(planeGeometry1,mat3);
          plane7.rotation.set( -Math.PI/2, 0, 0 );
          plane7.position.set(-23.8,81.2,0);
          plane7.rotation.y =-0.785;
@@ -145,8 +148,8 @@
         geometry.vertices[1] = new THREE.Vector3(35,70,35);
         geometry.vertices[2] = new THREE.Vector3(0,105,35);  
         geometry.faces[0] = new THREE.Face3(0,1,2);
-        var material =  new THREE.MeshBasicMaterial({ color: 0xff0000 });
-        var Tr =  new THREE.Mesh(geometry,material); 
+        //var material =  new THREE.MeshBasicMaterial({ color: 0xff0000 });
+        var Tr =  new THREE.Mesh(geometry,mat); 
         scene.add(Tr); 
         
         //三角形
@@ -155,15 +158,18 @@
         geometry1.vertices[1] = new THREE.Vector3(35,70,35);
         geometry1.vertices[2] = new THREE.Vector3(0,105,35);  
         geometry1.faces[0] = new THREE.Face3(0,1,2);
-        var material =  new THREE.MeshBasicMaterial({ color: 0xffff00 });
-        var Tr1 =  new THREE.Mesh(geometry1,material); 
+        //var material =  new THREE.MeshBasicMaterial({ color: 0xffff00 });
+        var Tr1 =  new THREE.Mesh(geometry1,mat); 
         Tr1.rotation.set(0,3.14,0);
         scene.add(Tr1); 
         
         //ブランコ柱1
+        　var texture = textureLoader.load("img/swing.jpeg");
+       　　 var mat4 = new THREE.MeshPhongMaterial();
+       　　　 mat4.map = texture;
         const cylinderGeometry = new THREE.CylinderGeometry( 1, 1, 40, 32 );
-　　　　　　　　　　　　　　　　const cylinderMaterial = new THREE.MeshBasicMaterial( {color: 0xff0000} );
-　　　　　　　　　　　　　　　　const cylinder1 = new THREE.Mesh( cylinderGeometry, cylinderMaterial);
+　　　　　　　　　　　　　　　　//const cylinderMaterial = new THREE.MeshBasicMaterial( {color: 0xff0000} );
+　　　　　　　　　　　　　　　　const cylinder1 = new THREE.Mesh( cylinderGeometry, mat4);
         cylinder1.position.x = 35;
         cylinder1.position.y = 18;
         cylinder1.position.z = 55;
@@ -171,7 +177,7 @@
         cylinder1.rotation.z =0.4;
 　　　　　　　　　　　　　　　
         //ブランコ柱2
-       　const cylinder2 = new THREE.Mesh( cylinderGeometry, cylinderMaterial);
+       　const cylinder2 = new THREE.Mesh( cylinderGeometry, mat4);
         cylinder2.position.x = 35;
         cylinder2.position.y = 18;
         cylinder2.position.z = 64;
@@ -180,7 +186,7 @@
 　　　　　　　　　　　　　　　　scene.add(cylinder2);
         
         //ブランコ柱3
-　　　　　　　　　　　　　　　　const cylinder3 = new THREE.Mesh( cylinderGeometry, cylinderMaterial);
+　　　　　　　　　　　　　　　　const cylinder3 = new THREE.Mesh( cylinderGeometry, mat4);
         cylinder3.position.x = 65;
         cylinder3.position.y = 18;
         cylinder3.position.z = 55;
@@ -189,7 +195,7 @@
 　　　　　　　　　　　　　　　　//scene.add(cylinder3);
         
         //ブランコ柱4
-　　　　　　　　　　　　　　　　const cylinder4 = new THREE.Mesh( cylinderGeometry, cylinderMaterial);
+　　　　　　　　　　　　　　　　const cylinder4 = new THREE.Mesh( cylinderGeometry, mat4);
         cylinder4.position.x = 65;
         cylinder4.position.y = 18;
         cylinder4.position.z = 64;
@@ -198,7 +204,7 @@
 　　　　　　　　　　　　　　　　//scene.add(cylinder4);
         
         //ブランコ柱5
-　　　　　　　　　　　　　　　　const cylinder5 = new THREE.Mesh( cylinderGeometry, cylinderMaterial);
+　　　　　　　　　　　　　　　　const cylinder5 = new THREE.Mesh( cylinderGeometry, mat4);
         cylinder5.position.x = 50;
         cylinder5.position.y = 34;
         cylinder5.position.z = 59.5;
@@ -207,23 +213,29 @@
 　　　　　　　　　　　　　　　　//scene.add(cylinder5);
         
         //ブランコ縄1
+        　var texture = textureLoader.load("img/rope.jpeg");
+       　　 var mat5 = new THREE.MeshPhongMaterial();
+       　　　 mat5.map = texture;
         const cylinderGeometry1 = new THREE.CylinderGeometry( 0.3, 0.3, 26, 32 );
-　　　　　　　　　　　　　　　　const cylinderMaterial1 = new THREE.MeshBasicMaterial( {color: 0xff0000} );
-　　　　　　　　　　　　　　　　const cylinder6 = new THREE.Mesh( cylinderGeometry1, cylinderMaterial1);
+　　　　　　　　　　　　　　　　//const cylinderMaterial1 = new THREE.MeshBasicMaterial( {color: 0xff0000} );
+　　　　　　　　　　　　　　　　const cylinder6 = new THREE.Mesh( cylinderGeometry1, mat5);
         cylinder6.position.x = 45;
         cylinder6.position.y = 21;
         cylinder6.position.z = 59.5;
         
         //ブランコ縄2
-　　　　　　　　　　　　　　　　const cylinder7 = new THREE.Mesh( cylinderGeometry1, cylinderMaterial1);
+　　　　　　　　　　　　　　　　const cylinder7 = new THREE.Mesh( cylinderGeometry1, mat5);
         cylinder7.position.x = 55;
         cylinder7.position.y = 21;
         cylinder7.position.z = 59.5;
         
         //ブランコ板
+        　var texture = textureLoader.load("img/swing1.jpeg");
+       　　 var mat6 = new THREE.MeshPhongMaterial();
+       　　　 mat6.map = texture;
         const cubeGeometry = new THREE.BoxGeometry(11, 0.5, 5);
-        const cubeMaterial = new THREE.MeshBasicMaterial( {color: 0xff0000} );
-        const cube = new THREE.Mesh( cubeGeometry, cubeMaterial );
+        //const cubeMaterial = new THREE.MeshBasicMaterial( {color: 0xff0000} );
+        const cube = new THREE.Mesh( cubeGeometry, mat6);
         cube.position.x = 50;
         cube.position.y = 8;
         cube.position.z = 59.5;
