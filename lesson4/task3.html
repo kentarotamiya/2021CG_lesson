@@ -68,7 +68,7 @@
          var planeMaterial = new THREE.MeshBasicMaterial({color: 0xffff00});
          var plane2 = new THREE.Mesh(planeGeometry,planeMaterial);
          plane2.rotation.set( -Math.PI/2, 0, 0 );
-         plane2.position.set(40,40,0);
+         plane2.position.set(35,35,0);
          plane2.rotation.y =1.57
          scene.add(plane2);
         
@@ -77,7 +77,7 @@
          var planeMaterial = new THREE.MeshBasicMaterial({color: 0xffffff});
          var plane3 = new THREE.Mesh(planeGeometry,planeMaterial);
          plane3.rotation.set( -Math.PI/2, 0, 0 );
-         plane3.position.set(-40,40,0);
+         plane3.position.set(-35,35,0);
          plane3.rotation.y =-1.57
          scene.add(plane3);
 
@@ -91,7 +91,7 @@
         sprite0.position.y = 50;
         sprite0.position.z = 0;
         sprite0.scale.set(100,100,100);
-        //scene.add(sprite0);
+        scene.add(sprite0);
 
         // 木1をスプライトで作成 
         var texture1 = textureLoader.load("img/tree1.png");
@@ -102,7 +102,7 @@
         sprite1.position.y = 50;
         sprite1.position.z = -100;
         sprite1.scale.set(100,100,100);
-        //scene.add(sprite1);
+        scene.add(sprite1);
 
         // 木1をスプライトで作成 
         var texture2 = textureLoader.load("img/tree2.png");
@@ -113,7 +113,7 @@
         sprite2.position.y = 50;
         sprite2.position.z = -100;
         sprite2.scale.set(100,100,100);
-        //scene.add(sprite2);
+        scene.add(sprite2);
 
         tick();
         // 毎フレーム時に実行されるループイベントです
