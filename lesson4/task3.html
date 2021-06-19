@@ -101,10 +101,10 @@
         
          // 平面を作成 屋根1
          var planeGeometry1 = new THREE.PlaneGeometry(65,70,5,5);
-         var planeMaterial = new THREE.MeshBasicMaterial({color: 0xff0000});
+         var planeMaterial = new THREE.MeshBasicMaterial({color: 0xff00ff});
          var plane2 = new THREE.Mesh(planeGeometry,planeMaterial);
          plane2.rotation.set( -Math.PI/2, 0, 0 );
-         plane2.position.set(23.8,80,0);
+         plane2.position.set(23.8,81,0);
          plane2.rotation.y =0.785
          scene.add(plane2);
         
@@ -113,7 +113,7 @@
          var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ffff});
          var plane2 = new THREE.Mesh(planeGeometry1,planeMaterial);
          plane2.rotation.set( -Math.PI/2, 0, 0 );
-         plane2.position.set(-23.8,80,0);
+         plane2.position.set(-23.8,81,0);
          plane2.rotation.y =-0.785
          scene.add(plane2);
         
