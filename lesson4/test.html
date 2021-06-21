@@ -55,6 +55,7 @@
     var plane = new THREE.Mesh(planeGeometry,planeMaterial);
     plane.rotation.set( -Math.PI/2, 0, 0 );
     plane.position.set(0,0,0);
+    scene.add(plane);
 
     // 頭を作成
     var head_g = new THREE.SphereGeometry( 0.57, 32, 32 );
@@ -162,15 +163,7 @@
      pig.add(lear); //左耳を追加
      pig.add(tail); //尻尾を追加
      pig.position.set(0,1,0);//ブタグループの原点の位置
-   
-
-     //全体のオブジェクト
-
-    const all = new THREE.Group();
-     all.add(plane);//平面を追加
-     all.add(pig); // ブタを追加
-     all.position.set(0,0,-5);//全体グループの原点の位置
-    scene.add(all); 
+     scene.add(pig);
 
         // 木0をスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
