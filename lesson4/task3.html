@@ -68,7 +68,7 @@
        　　　 mat0.map = texture;
          var bump = textureLoader.load("img/grassbump.jpeg");
          mat0.bumpMap = bump;
-         mat0.bumpscale = 0.3;
+         mat0.bumpscale = 0.7;
          var plane0 = new THREE.Mesh(planeGeometry0,mat0);
          plane0.rotation.set( -Math.PI/2, 0, 0 );
          plane0.position.set(25,0,25);
@@ -156,7 +156,7 @@
        　　　 mat.map = texture;
          var bump1 = textureLoader.load("img/wall2bump.jpeg");
          mat.bumpMap = bump1;
-         mat.bumpscale = 0.4;
+         mat.bumpscale = 1;
          var plane = new THREE.Mesh(planeGeometry,mat);
          plane.rotation.set( -Math.PI/2, 0, 0 );
          plane.position.set(0,0.1,0);
@@ -231,7 +231,7 @@
        　　　 mat3.map = texture;
          var bump = textureLoader.load("img/ceilbump2.jpg");
          mat3.bumpMap = bump;
-         mat3.bumpscale = 0.4;
+         mat3.bumpscale = 1;
          var planeGeometry1 = new THREE.PlaneGeometry(67.3,75,5,5);
          var plane6 = new THREE.Mesh(planeGeometry1,mat3);
          plane6.rotation.set( -Math.PI/2, 0, 0 );
@@ -276,7 +276,7 @@
        　　　 mat4.map = texture;
          var bump = textureLoader.load("img/swingbump.jpeg");
          mat4.bumpMap = bump;
-         mat4.bumpscale = 0.2;
+         mat4.bumpscale = 0.4;
         const cylinderGeometry = new THREE.CylinderGeometry( 1, 1, 40, 32 );
 　　　　　　　　　　　　　　　　const cylinder1 = new THREE.Mesh( cylinderGeometry, mat4);
         cylinder1.position.x = 35;
@@ -323,7 +323,7 @@
        　　　 mat5.map = texture;
          var bump = textureLoader.load("img/ropebump.jpeg");
          mat5.bumpMap = bump;
-         mat5.bumpscale = 0.2;
+         mat5.bumpscale = 0.3;
         const cylinderGeometry1 = new THREE.CylinderGeometry( 0.3, 0.3, 26, 32 );　　
 　　　　　　　　　　　　　　　　const cylinder6 = new THREE.Mesh( cylinderGeometry1, mat5);
         cylinder6.position.x = 45;
@@ -342,7 +342,7 @@
        　　　 mat6.map = texture;
          var bump = textureLoader.load("img/swing1bump.jpeg");
          mat6.bumpMap = bump;
-         mat6.bumpscale = 0.2;
+         mat6.bumpscale = 0.4;
         const cubeGeometry = new THREE.BoxGeometry(11, 0.5, 5);
         const cube = new THREE.Mesh( cubeGeometry, mat6);
         cube.position.x = 50;
