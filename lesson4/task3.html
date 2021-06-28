@@ -154,9 +154,9 @@
         　　var texture = textureLoader.load("img/wall2.jpeg");
        　　 var mat = new THREE.MeshPhongMaterial();
        　　　 mat.map = texture;
-         var bump = textureLoader.load("wall2bump.jpg");
-         mat.bumpMap = bump;
-         mat.bumpscale = 0.1;
+         var bump1 = textureLoader.load("wall2bump.jpg");
+         mat.bumpMap = bump1;
+         mat.bumpscale = 100;
          var plane = new THREE.Mesh(planeGeometry,mat);
          plane.rotation.set( -Math.PI/2, 0, 0 );
          plane.position.set(0,0.1,0);
