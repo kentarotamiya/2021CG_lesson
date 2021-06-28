@@ -68,7 +68,7 @@
        　　　 mat0.map = texture;
          var bump = textureLoader.load("img/grassbump.jpeg");
          mat0.bumpMap = bump;
-         mat0.bumpscale = 0.2;
+         mat0.bumpscale = 1;
          var plane0 = new THREE.Mesh(planeGeometry0,mat0);
          plane0.rotation.set( -Math.PI/2, 0, 0 );
          plane0.position.set(25,0,25);
@@ -156,7 +156,7 @@
        　　　 mat.map = texture;
          var bump1 = textureLoader.load("img/wall2bump.jpeg");
          mat.bumpMap = bump1;
-         mat.bumpscale = 100;
+         mat.bumpscale = 1;
          var plane = new THREE.Mesh(planeGeometry,mat);
          plane.rotation.set( -Math.PI/2, 0, 0 );
          plane.position.set(0,0.1,0);
@@ -196,7 +196,7 @@
        　　　 mat1.map = texture;
          var bump = textureLoader.load("img/door4bump.jpeg");
          mat1.bumpMap = bump;
-         mat1.bumpscale = 0.1;
+         mat1.bumpscale = 0.4;
          var planeGeometry8 = new THREE.PlaneGeometry(45,24,5,5);
          var plane8 = new THREE.Mesh(planeGeometry8,mat1);
          plane8.rotation.set( -Math.PI/2, 0, 0 );
@@ -210,7 +210,7 @@
        　　　 mat2.map = texture;
          var bump = textureLoader.load("img/window2bump.jpeg");
          mat2.bumpMap = bump;
-         mat2.bumpscale = 0.1;
+         mat2.bumpscale = 0.4;
          var planeGeometry9 = new THREE.PlaneGeometry(15,15,5,5);
          var plane9 = new THREE.Mesh(planeGeometry9,mat2);
          plane9.rotation.set( -Math.PI/2, 0, 0 );
@@ -231,7 +231,7 @@
        　　　 mat3.map = texture;
          var bump = textureLoader.load("img/ceilbump2.jpg");
          mat3.bumpMap = bump;
-         mat3.bumpscale = 100;
+         mat3.bumpscale = 0.1;
          var planeGeometry1 = new THREE.PlaneGeometry(67.3,75,5,5);
          var plane6 = new THREE.Mesh(planeGeometry1,mat3);
          plane6.rotation.set( -Math.PI/2, 0, 0 );
