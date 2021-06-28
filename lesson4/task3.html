@@ -61,7 +61,8 @@
         
         var textureLoader = new THREE.TextureLoader();  
         
-         var planeGeometry0 = new THREE.PlaneGeometry(200,200,5,5);
+        //芝生作成
+         var planeGeometry0 = new THREE.PlaneGeometry(100,100,5,5);
         　　var texture = textureLoader.load("img/grass.jpeg");
        　　 var mat0 = new THREE.MeshPhongMaterial();
        　　　 mat0.map = texture;
@@ -70,8 +71,23 @@
          mat0.bumpscale = 0.1;
          var plane0 = new THREE.Mesh(planeGeometry0,mat0);
          plane0.rotation.set( -Math.PI/2, 0, 0 );
-         plane0.position.set(0,0,0);
+         plane0.position.set(50,0,50);
          scene.add(plane0);
+        
+        var plane1 = new THREE.Mesh(planeGeometry0,mat0);
+         plane1.rotation.set( -Math.PI/2, 0, 0 );
+         plane1.position.set(50,0,-50);
+         scene.add(plane1);
+        
+        var plane2 = new THREE.Mesh(planeGeometry0,mat0);
+         plane2.rotation.set( -Math.PI/2, 0, 0 );
+         plane2.position.set(-50,0,50);
+         scene.add(plane2);
+        
+        var plane3 = new THREE.Mesh(planeGeometry0,mat0);
+         plane3.rotation.set( -Math.PI/2, 0, 0 );
+         plane3.position.set(-50,0,-50);
+         scene.add(plane3);
                
          // 平面を作成床
          var planeGeometry = new THREE.PlaneGeometry(70,70,5,5);
