@@ -194,7 +194,7 @@
         　var texture = textureLoader.load("img/door4.jpeg");
        　　 var mat1 = new THREE.MeshPhongMaterial();
        　　　 mat1.map = texture;
-         var bump = textureLoader.load("door4bump.jpg");
+         var bump = textureLoader.load("door4bump.jpeg");
          mat1.bumpMap = bump;
          mat1.bumpscale = 0.1;
          var planeGeometry8 = new THREE.PlaneGeometry(45,24,5,5);
@@ -208,7 +208,7 @@
         　var texture = textureLoader.load("img/window2.jpeg");
        　　 var mat2 = new THREE.MeshPhongMaterial();
        　　　 mat2.map = texture;
-         var bump = textureLoader.load("window2bump.jpg");
+         var bump = textureLoader.load("window2bump.jpeg");
          mat2.bumpMap = bump;
          mat2.bumpscale = 0.1;
          var planeGeometry9 = new THREE.PlaneGeometry(15,15,5,5);
@@ -229,9 +229,9 @@
         　var texture = textureLoader.load("img/ceil2.jpeg");
        　　 var mat3 = new THREE.MeshPhongMaterial();
        　　　 mat3.map = texture;
-         var bump = textureLoader.load("ceilbump2.jpg");
+         var bump = textureLoader.load("ceilbump2.jpeg");
          mat3.bumpMap = bump;
-         mat3.bumpscale = 0.1;
+         mat3.bumpscale = 100;
          var planeGeometry1 = new THREE.PlaneGeometry(67.3,75,5,5);
          var plane6 = new THREE.Mesh(planeGeometry1,mat3);
          plane6.rotation.set( -Math.PI/2, 0, 0 );
@@ -274,7 +274,7 @@
         　var texture = textureLoader.load("img/swing.jpeg");
        　　 var mat4 = new THREE.MeshPhongMaterial();
        　　　 mat4.map = texture;
-         var bump = textureLoader.load("swingbump.jpg");
+         var bump = textureLoader.load("swingbump.jpeg");
          mat4.bumpMap = bump;
          mat4.bumpscale = 0.1;
         const cylinderGeometry = new THREE.CylinderGeometry( 1, 1, 40, 32 );
@@ -321,7 +321,7 @@
         　var texture = textureLoader.load("img/rope.jpeg");
        　　 var mat5 = new THREE.MeshPhongMaterial();
        　　　 mat5.map = texture;
-         var bump = textureLoader.load("ropebump.jpg");
+         var bump = textureLoader.load("ropebump.jpeg");
          mat5.bumpMap = bump;
          mat5.bumpscale = 0.1;
         const cylinderGeometry1 = new THREE.CylinderGeometry( 0.3, 0.3, 26, 32 );　　
@@ -340,7 +340,7 @@
         　var texture = textureLoader.load("img/swing1.jpeg");
        　　 var mat6 = new THREE.MeshPhongMaterial();
        　　　 mat6.map = texture;
-         var bump = textureLoader.load("swing1bump.jpg");
+         var bump = textureLoader.load("swing1bump.jpeg");
          mat6.bumpMap = bump;
          mat6.bumpscale = 0.1;
         const cubeGeometry = new THREE.BoxGeometry(11, 0.5, 5);
